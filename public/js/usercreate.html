@@ -1,0 +1,78 @@
+<div class="container">
+	<h1>Create User </h1>
+
+	<form name=form1 ng-submit="createNewUser()" class="form-horizontal"	id="form1" role="form">
+		<!-- div class="form-group" ng-class="{ 'has-error': form1.firstName.$dirty && form1.firstName.$error.required }">
+				<label class="control-label" for="firstName">First name:</label>
+				 <input
+				type="text" name="firstName" id="firstName"
+				ng-model="play_user.firstName required" /> <span
+				ng-show="form1.firstName.$dirty && form1.firstName.$error.required"
+				class="help-block">First name is required</span>
+		</div-->
+		 <!-- <div class="form-group" ng-class="{ 'has-error': form1.firstName.$dirty && form1.firstName.$error.required && form1.firstName.$error.pattern}">
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" id="firstName" class="form-control" ng-model="play_user.firstName" ng-pattern="[a-zA-Z]+" required />
+            <span ng-show="form1.firstName.$dirty && form1.firstName.$error.required" class="help-block">First name is required</span>
+            <span ng-show="form1.firstName.$error.pattern" class="help-block">First name must have characters only</span>
+        </div>
+ -->
+ <div class="form-group" ng-class="{ 'has-error': form1.firstName.$dirty && form1.firstName.$error.required }">
+			<label for="firstName">first name:</label>
+			<input type="text" name="firstName" id="firstName" class="form-control" ng-model="play_user.firstName" required />
+				<span ng-show="form1.firstName.$dirty && form1.firstName.$error.required" class="help-block">first name is required</span>
+		</div>
+		
+		<div class="form-group" ng-class="{ 'has-error': form1.LastName.$dirty && form1.LastName.$error.required }">
+			<label for="LastName">Last name:</label>
+			<input type="text" name="LastName" id="LastName" class="form-control" ng-model="play_user.LastName" required />
+				<span ng-show="form1.LastName.$dirty && form1.LastName.$error.required" class="help-block">Last name is required</span>
+		</div>
+		<div class="form-group" ng-class="{ 'has-error': form1.emailAddress.$dirty && form1.emailAddress.$error.required && form1.emailAddress.$error.email}">
+			<label for="emailAddress">Email:</label>
+			<input type="email" name="emailAddress" id="emailAddress" class="form-control" ng-model="play_user.emailAddress" required />
+			<span ng-show="form1.emailAddress.$dirty && form1.emailAddress.$error.required"  class="help-block">Email is required</span>
+			<span ng-show="form1.emailAddress.$error.email">Invalid email address.</span>
+		</div>
+
+		<div class="form-group" ng-class="{ 'has-error': form1.streetName.$dirty && form1.streetName.$error.required }">
+			<label for="streetName">streetName:</label>
+			<input type="text" name="streetName" id="streetName" class="form-control" ng-model="play_user.streetName" required />
+			<span ng-show="form1.streetName.$dirty && form1.streetName.$error.required" class="help-block">Email is required</span>
+		</div>
+		<div class="form-group" ng-class="{ 'has-error': form1.houseNumber.$dirty && form1.houseNumber.$error.required }">
+			<label for="houseNumber">houseNumber:</label>
+			<input type="text" name="houseNumber" id="streetName" class="form-control" ng-model="play_user.houseNumber" required />
+			<span ng-show="form1.houseNumber.$dirty && form1.houseNumber.$error.required" class="help-block">houseNumber is required</span>
+		</div>
+		<div class="form-group" ng-class="{ 'has-error': form1.city.$dirty && form1.city.$error.required }">
+			<label for="city">city:</label>
+			<input type="text" name="city" id="city" class="form-control" ng-model="play_user.city" required />
+			<span ng-show="form1.city.$dirty && form1.city.$error.required" class="help-block">city is required</span>
+		</div>
+		<div class="form-group" ng-class="{ 'has-error': form1.birthDate.$dirty && form1.birthDate.$error.required && form1.input.$error.date}">
+			<label for="birthDate">birthDate:</label>
+			<input type="date" name="birthDate" id="birthDate" class="form-control" placeholder="yyyy-MM-dd" ng-model="play_user.birthDate" required />
+			<span ng-show="form1.birthDate.$dirty && form1.birthDate.$error.required" class="help-block">birthDate is required</span>
+			<span class="error" ng-show="form1.input.$error.date">Not a valid date!</span>
+		</div>
+		<div class="form-group" ng-class="{ 'has-error': form1.userName.$dirty && form1.userName.$error.required }">
+			<label class="control-label" for="userName">userName:</label>
+			<input type="text" name="userName" id="userName" class="form-control"  ng-model="play_user.userName" required />
+			<span ng-show="form1.userName.$dirty && form1.userName.$error.required" class="help-block">userName is required</span>
+		</div>
+		<div class="form-group" ng-class="{ 'has-error': form1.password.$dirty && form1.password.$error.required }">
+			<label class="control-label" for="password">password:</label>
+			<input type="text" name="password" id="password" class="form-control" ng-model="play_user.password" required />
+			<span ng-show="form1.password.$dirty && form1.password.$error.required" class="help-block">password is required</span>
+		</div>
+
+		<div class="control-group">
+			<div class="controls">
+				<!-- user-creation.html: -->
+				<!-- <a ng-click="createNewUser()" class="btn btn-small btn-primary">create new user</a> -->
+				<button type="submit" form="form1" value="Submit">Submit</button>
+			</div>
+		</div>
+	</form>
+</div>

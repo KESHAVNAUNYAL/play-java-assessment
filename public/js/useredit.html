@@ -1,0 +1,68 @@
+<div class="container">
+    <h1>Edit User</h1>
+    <form novalidate="novalidate" ng-submit="editUser()" class="form-horizontal" id="form1">
+        <div class="control-group">
+            <label class="control-label" for="inputFirstName">First name:</label>
+            <div class="controls">
+                <input type="text" id="inputFirstName" ng-model="play_user.firstName"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">Last name:</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="play_user.lastName"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputemailAddress">Email:</label>
+            <div class="controls">
+                <input type="text" id="inputemailAddress" ng-model="play_user.emailAddress"/>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="inputstreetName">streetName:</label>
+            <div class="controls">
+                <input type="text" id="inputstreetName" ng-model="play_user.streetName"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputhouseNumber">houseNumber:</label>
+            <div class="controls">
+                <input type="text" id="inputhouseNumber" ng-model="play_user.houseNumber"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputcity">city:</label>
+            <div class="controls">
+                <input type="text" id="inputcity" ng-model="play_user.city"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputbirthDate">birthDate:</label>
+            <div class="controls">
+                <input type="date" id="inputbirthDate" placeholder="yyyy-MM-dd" ng-model="play_user.birthDate"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputuserName">userName:</label>
+            <div class="controls">
+                <input type="text" id="inputuserName" ng-model="play_user.userName"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputpassword">password:</label>
+            <div class="controls">
+                <input type="text" id="password" ng-model="play_user.password"/>
+            </div>
+        </div>
+       
+        <div class="control-group">
+            <div class="controls">
+              <!-- user-creation.html: -->
+                <!-- <a ng-click="edituser()" class="btn btn-small btn-primary">create new user</a> -->
+                <button type="submit" form="form1" value="Submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
