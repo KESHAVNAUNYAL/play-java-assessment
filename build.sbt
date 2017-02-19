@@ -17,10 +17,12 @@ libraryDependencies ++= Seq(
   "org.dbunit" % "dbunit" % "2.4.9",
   cache,
   javaWs,
+  "org.mindrot" % "jbcrypt" % "0.3m",
   "org.codehaus.jackson" % "jackson-mapper-asl" % "1.8.5"
 )
 
 routesGenerator := InjectedRoutesGenerator
 
 fork in run := false
+
 
