@@ -1,0 +1,9 @@
+error.form=Please correct the form below
+error.form.file=Error reading input file
+error.form.pass=Invalid password or user
+success.add=Successfully added %s
+error.invalid.ean=Ean should be a 13 digits number
+error.prod.notExist=Product %s does not exist
+error.user.exist=The user with the same email already exist
+validation.required=%s is required
+form.error.required=%s is required

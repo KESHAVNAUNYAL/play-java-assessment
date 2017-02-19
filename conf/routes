@@ -2,8 +2,24 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+# Home page
+GET     /                           controllers.PlayUserController.index()
+GET    /create                 controllers.PlayUserController.usercreate()
+GET    /edit/$id<[0-9]+>                 controllers.PlayUserController.edit(id: Integer)
+POST     /playuser/$id<[0-9]+>                  controllers.PlayUserController.update(id: Integer)
+#GET     /playuser/$id<[0-9]+>      controllers.PlayUserController.get(id: Integer)
+
+# Routes API Rest
+GET    /playuser/$page<[0-9]+>/$size<[0-9]+>                 controllers.PlayUserController.allrestNew(page: Integer,size: Integer)
+
+
+POST    /playuser                  controllers.PlayUserController.create()
+
+PUT     /playuser/$id<[0-9]+>                  controllers.PlayUserController.update(id: Integer)
+
+DELETE  /playusers/$id<[0-9]+>      controllers.PlayUserController.delete(id: Integer)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
