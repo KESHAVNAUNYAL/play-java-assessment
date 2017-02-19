@@ -1,0 +1,36 @@
+@(id: Integer,playuser: Form[model.PlayUser])
+
+
+@import helper._
+@import views.html._
+
+
+@main("Welcome") {
+
+
+<div class="container">
+	<h1>Edit User</h1>
+</div> 
+@form(routes.PlayUserController.update(id) ) {
+<fieldset>
+@text(playuser("id"), label = "User Id", typee="text")
+@text(playuser("firstName"), label = "First Name", typee="text")
+@text(playuser("lastName"), label = "lastName" , typee="text")
+@text(playuser("emailAddress"), label = "emailAddress" , typee="email")
+@text(playuser("streetName"), label = "streetName" , typee="text")
+@text(playuser("houseNumber"), label = "houseNumber" , typee="text")
+@text(playuser("city"), label = "City" , typee="text")
+@text(playuser("birthDate"), label = "BirthDate" , typee="date")
+@text(playuser("userName"), label = "UserName" , typee="text")
+@text(playuser("password"), label = "Password" , typee="password")
+
+            
+			
+</fieldset>			
+
+<div class="actions">
+            <input type="submit" value="Update" class="btn primary" > 
+</div>
+
+}
+}

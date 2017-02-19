@@ -1,24 +1,36 @@
-@*
- * This template is called from the `index` template. This template
- * handles the rendering of the page header and body tags. It takes
- * two arguments, a `String` for the title of the page and an `Html`
- * object to insert into the body of the page.
- *@
 @(title: String)(content: Html)
 
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
-        @* Here's where we render the page title `String`. *@
-        <title>@title</title>
-        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
-    </head>
-    <body>
-        @* And here's where we render the `Html` object containing
-         * the page content. *@
-        @content
-
-        <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
-    </body>
+        <title>@title</title>   
+       <link rel="stylesheet" href="@routes.Assets.versioned("css/menubar.css")">
+       <!--   <link rel="stylesheet" href="@routes.Assets.versioned("css/bootstrap.min.css")"> -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  		<script src="@routes.Assets.versioned("js/lib/javascript/jquery.min.js")"></script>
+  		<script src="@routes.Assets.versioned("js/lib/bootstrap/bootstrap.min.js")"></script>
+        <div>
+   <ul>
+  <li><a href="/create">Create</a></li>
+  <li class="dropdown">
+    <a class="dropbtn">Maintain</a>
+    <div class="dropdown-content" id="myDropdown">
+       <a href="/playuser/1/20" method="get" >User List</a>
+    	</div>
+  	</li>
+	</ul>
+	</div>
+</head>
+<body>
+@if(flash.containsKey("success")) {
+        <div class="alert-message warning">
+        <strong>Done!</strong> 
+            @flash.get("success")
+        </div>
+       } 
+       
+       
+@content
+</body>
 </html>
